@@ -1,0 +1,70 @@
+body {
+    --grid-color: rgba(0,0,0,0.1);
+    --grid-size: 80px;
+    --bg-gradient-start: #fb5a79;
+    --bg-gradient-end: #002b92;
+    --container-bg: #20202080;
+    --container-border: rgb(99, 99, 99);
+    --container-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    --container-blur: 10px;
+    --link-color: #1976d2;
+    --link-hover-bg: linear-gradient(45deg, #fb5a79, #002b92);
+    --link-hover-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+    --heading-color: #fff;
+    --text-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background: 
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    background-size: var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size), 100% 100%;
+    background-position: 0 0, 0 0, 0 0;
+}
+
+.container {
+    background: var(--container-bg);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: var(--container-shadow);
+    backdrop-filter: blur(var(--container-blur));
+    text-align: center;
+    border: 1px solid var(--container-border);
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: var(--heading-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+a:hover {
+    color: #fff;
+    background: var(--link-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: var(--link-hover-shadow);
+}
