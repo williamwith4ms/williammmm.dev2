@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERY PASSWORD LEAKED!!!!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>EVERY PASSWORD LEAKED!!!!!</h1>
+    
+    <div class="container">
+        <div class="controls">
+            <div class="page-info">
+                Page <span id="currentPage">1</span> | 
+                Items <span id="rangeStart">1</span> - <span id="rangeEnd">500</span>
+            </div>
+            
+            <div class="page-controls">
+                <button id="firstBtn" onclick="goToPage(1n)">First</button>
+                <button id="prevBtn" onclick="goToPage(currentPageNumber - 1n)">Previous</button>
+                
+                <input type="text" id="pageInput" class="page-input" min="1" value="1" 
+                       onchange="goToPage(BigInt(this.value || 1))" placeholder="Page">
+                
+                <button id="nextBtn" onclick="goToPage(currentPageNumber + 1n)">Next</button>
+                <button onclick="goToPage(currentPageNumber + 10n)">+10</button>
+                <button onclick="goToPage(currentPageNumber + 100n)">+100</button>
+                <button onclick="goToPage(currentPageNumber + 1000n)">+1K</button>
+                <button onclick="goToPage(currentPageNumber + 1000000n)">+1M</button>
+                <button onclick="goToPage(currentPageNumber + 1000000000n)">+1B</button>
+                <button onclick="goToPage(currentPageNumber + 1000000000000n)">+1T</button>
+            </div>
+        </div>
+
+        <div id="numberContainer" class="number-grid">
+        </div>
+
+        <div class="stats">
+            <strong>Items per page:</strong> 500 | 
+            <strong>Current range:</strong> <span id="statsRange">1 - 500</span> |
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
