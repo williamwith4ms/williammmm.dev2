@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Error</title>
+    <style>
+        body {
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            width: 1000px;
+            margin: 80px auto;
+        }
+        img {
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+        a {
+            color: #00bfff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Error</h1>
+    <p id="msg"></p>
+    <img id="cat" alt="HTTP Cat" />
+    <p><a href="/">Return to Home</a></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code') || '520';
+
+        document.title = `${code} Error`;
+        document.getElementById('title').innerText = `${code} Error`;
+        document.getElementById('cat').src = `https://http.cat/${code}`;
+    </script>
+</body>
+</html>
