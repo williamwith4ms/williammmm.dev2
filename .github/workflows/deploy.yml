@@ -19,5 +19,5 @@ jobs:
         username: root
         key: ${{ secrets.DO_SSH_KEY }}
         script: |
-          cd /var/www/williammmm.dev
+          cd /var/www/williammmm.dev/html
           git pull
