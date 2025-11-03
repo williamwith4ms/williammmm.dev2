@@ -16,7 +16,7 @@ jobs:
       uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.DO_DROPLET_IP }}
-        username: root
+        username: github
         key: ${{ secrets.DO_SSH_KEY }}
         script: |
           cd /var/www/williammmm.dev/html
